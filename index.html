@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay Awhile — Find your kind of somewhere. Discover beautiful stays across India.">
+    <title>Stay Awhile — Find your kind of somewhere</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="brand-logo">
+    <span class="brand-icon">⌂</span>
+    <span>stay <em>awhile.</em></span>
+</a>
+
+    <nav class="nav-links">
+        <a href="#discover">Discover</a>
+        <a href="#moods">By mood</a>
+        <a href="#story">Our story</a>
+        <a href="home.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">☾</button>
+        <a href="signin.html" class="nav-login">Log in</a>
+        <a href="register.html" class="btn btn-dark">Join us ↗</a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">A LITTLE PLACE TO GET LOST</p>
+
+            <h1>Not just places to stay.<br>
+                <em>Places worth staying for.</em>
+            </h1>
+
+            <p class="hero-description">
+                For the slow mornings, spontaneous weekends and
+                the little escapes you didn't know you needed.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#discover" class="btn btn-light">Find your somewhere ↓</a>
+                <a href="register.html" class="btn btn-outline-light">Become a member</a>
+            </div>
+
+            <div class="hero-note">
+                Curated stays. Across India. Made for you.
+            </div>
+        </div>
+
+        <div class="hero-image hero-slideshow">
+    <img
+        class="slide-image active"
+        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400"
+        alt="Beautiful luxury villa">
+
+    <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1400"
+        alt="Tropical resort">
+
+    <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1400"
+        alt="Mountain cabin">
+
+    <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=1400"
+        alt="Forest retreat">
+
+    <div class="image-caption">
+        <span id="slideNumber">01 / 04</span>
+        <span id="slideLocation">THE SLOW LIFE</span>
+    </div>
+
+    <div class="slide-controls">
+        <button id="previousSlide" aria-label="Previous image">←</button>
+        <button id="nextSlide" aria-label="Next image">→</button>
+    </div>
+</div>
+    </section>
+
+    <section class="section mood-section" id="moods">
+        <div class="section-heading">
+            <p class="eyebrow">LESS PLANNING, MORE FEELING</p>
+            <h2>What's the mood?</h2>
+            <p>Pick a feeling. We'll find the place.</p>
+        </div>
+
+        <div class="mood-grid">
+            <a href="#discover" class="mood-card" data-mood="mountains">
+                <img
+    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900"
+    alt="Snow-covered mountain landscape">
+                <div class="mood-overlay">
+                    <span>01</span>
+                    <h3>Somewhere quiet</h3>
+                    <p>Mountains & mist</p>
+                </div>
+            </a>
+
+            <a href="#discover" class="mood-card" data-mood="beach">
+                <img
+    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900"
+    alt="Beautiful tropical beach">                
+    <div class="mood-overlay">
+                    <span>02</span>
+                    <h3>Somewhere sunny</h3>
+                    <p>Sea & sunshine</p>
+                </div>
+            </a>
+
+            <a href="#discover" class="mood-card" data-mood="nature">
+                <img
+    src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=900"
+    alt="Peaceful green forest">
+                <div class="mood-overlay">
+                    <span>03</span>
+                    <h3>Somewhere green</h3>
+                    <p>Nature & slow living</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section stays-section" id="discover">
+        <div class="section-heading split-heading">
+            <div>
+                <p class="eyebrow">THE STAY CUTS</p>
+                <h2>Places that stay with you.</h2>
+                <p>Little escapes, thoughtfully selected.</p>
+            </div>
+            <a href="home.html" class="text-link">Explore all stays ↗</a>
+        </div>
+
+        <div class="stay-grid" id="stayGrid">
+            <!-- Cards are added using data.js and app.js -->
+        </div>
+    </section>
+
+    <section class="feature-section" id="story">
+        <div class="feature-intro">
+            <p class="eyebrow">A DIFFERENT WAY TO GET AWAY</p>
+            <h2>Travel less like a tourist.<br>
+                Stay more like yourself.</h2>
+            <p>
+                We believe the best trips aren't always about how far
+                you go. They're about how you feel when you get there.
+            </p>
+            <a href="signup.html" class="btn btn-dark">Find your somewhere ↗</a>
+        </div>
+
+        <div class="feature-cards">
+            <article class="feature-card">
+                <span>01</span>
+                <h3>Thoughtfully picked</h3>
+                <p>Handpicked places with personality, comfort and character.</p>
+            </article>
+
+            <article class="feature-card">
+                <span>02</span>
+                <h3>Made for your mood</h3>
+                <p>Find your next stay based on the feeling you're looking for.</p>
+            </article>
+
+            <article class="feature-card">
+                <span>03</span>
+                <h3>Little escapes</h3>
+                <p>Discover special places across India for your next break.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section project-outline">
+        <p class="eyebrow">YOUR STAY AWHILE EXPERIENCE</p>
+        <h2>Everything in one place.</h2>
+
+        <div class="outline-grid">
+            <a href="register.html">01. Register <span>↗</span></a>
+            <a href="signup.html">02. Create account <span>↗</span></a>
+            <a href="signin.html">03. Sign in <span>↗</span></a>
+            <a href="home.html">04. Explore dashboard <span>↗</span></a>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <p class="eyebrow">YOUR NEXT LITTLE ESCAPE</p>
+        <h2>Somewhere is waiting.</h2>
+        <p>Join the Stay Awhile community and start discovering.</p>
+        <a href="register.html" class="btn btn-light">Get started ↗</a>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="logo">stay<span>awhile.</span></a>
+    <p>Find your kind of somewhere.</p>
+    <p>© 2026 Stay Awhile. A Web Technology Micro Project.</p>
+</footer>
+
+</body>
+</html>

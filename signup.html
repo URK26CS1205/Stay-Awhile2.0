@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up — Stay Awhile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/theme.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+</head>
+<body class="auth-page">
+
+<header class="navbar">
+    <a href="index.html" class="logo">stay<span>awhile.</span></a>
+    <div class="nav-actions">
+        <a href="index.html" class="nav-login">Home</a>
+        <button class="theme-toggle" aria-label="Toggle theme">☾</button>
+    </div>
+</header>
+
+<main class="auth-container">
+    <section class="auth-card">
+        <p class="eyebrow">A NEW LITTLE BEGINNING</p>
+        <h1>Create your account.</h1>
+        <p class="auth-subtitle">Your next escape starts here.</p>
+
+        <div id="signupMessage" class="form-alert" role="alert"></div>
+
+        <form id="signupForm" novalidate>
+            <div class="form-group">
+                <label for="signupEmail">Email Address</label>
+                <input type="email" id="signupEmail" placeholder="you@example.com" required>
+                <span class="error-msg" id="signupEmailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" placeholder="At least 8 characters" required>
+                <span class="error-msg" id="signupPasswordError"></span>
+            </div>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="terms">
+                <span>I agree to the Terms of Service and Privacy Policy.</span>
+            </label>
+
+            <span class="error-msg" id="termsError"></span>
+
+            <button type="submit" class="btn btn-dark btn-full">
+                Sign up ↗
+            </button>
+        </form>
+
+        <p class="auth-bottom">
+            Already have an account? <a href="signin.html">Sign in</a>
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2026 Stay Awhile.</p>
+</footer>
+
+</body>
+</html>

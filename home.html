@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dashboard — Stay Awhile</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/calculator.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+<header class="navbar dashboard-nav">
+    <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
+    <a href="index.html" class="logo">stay<span>awhile.</span></a>
+
+    <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">☾</button>
+        <button class="btn btn-dark logout-btn" id="logoutBtn">Log out</button>
+    </div>
+</header>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <p class="eyebrow">YOUR SPACE</p>
+
+        <nav class="sidebar-links">
+            <a href="#overview" class="active">⌂ Overview</a>
+            <a href="#destinations">⌖ Discover stays</a>
+            <a href="#calculator">▦ Travel calculator</a>
+            <a href="index.html">↗ Main website</a>
+            <a href="signin.html" id="sidebarLogout">⇥ Sign out</a>
+        </nav>
+
+        <div class="sidebar-note">
+            <p>“Sometimes all you need is a little getaway.”</p>
+            <span>— Stay Awhile</span>
+        </div>
+    </aside>
+
+    <main class="dashboard-main" id="overview">
+        <p class="eyebrow">YOUR LITTLE CORNER OF THE WORLD</p>
+
+        <h1>Welcome, <span id="welcomeName">traveller</span>.</h1>
+        <p class="dashboard-subtitle">Where would you like to disappear to?</p>
+
+    <div class="dashboard-banner dashboard-slideshow">
+
+    <img class="slide-image active"
+         src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1400"
+         alt="Tropical resort">
+
+    <img class="slide-image"
+         src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1400"
+         alt="Mountain stay">
+
+    <img class="slide-image"
+         src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400"
+         alt="Luxury villa">
+
+    <div class="dashboard-banner-content">
+        <p class="eyebrow">YOUR NEXT ESCAPE</p>
+        <h2>Make room for a little wonder.</h2>
+        <a href="#destinations" class="btn btn-light">
+            Explore stays ↗
+        </a>
+    </div>
+
+    <div class="dashboard-slide-controls">
+        <button id="dashboardPrevious" aria-label="Previous image">←</button>
+        <button id="dashboardNext" aria-label="Next image">→</button>
+    </div>
+
+</div>
+
+        <section id="destinations" class="dashboard-destinations">
+            <div class="section-heading">
+                <p class="eyebrow">PICK YOUR NEXT ESCAPE</p>
+                <h2>Made for your mood.</h2>
+            </div>
+
+            <div class="stay-grid" id="dashboardStayGrid"></div>
+        </section>
+    </main>
+
+    <aside class="dashboard-right">
+        <div class="welcome-widget">
+            <p class="eyebrow">A LITTLE REMINDER</p>
+            <h3>Take your time.</h3>
+            <p>Good things happen when you slow down.</p>
+        </div>
+
+        <section class="calculator-card" id="calculator">
+            <p class="eyebrow">PLAN YOUR LITTLE ESCAPE</p>
+            <h3>Quick Calculator</h3>
+
+            <input type="text" id="calcDisplay" class="calc-display"
+                   value="0" readonly aria-label="Calculator display">
+
+            <div class="calc-grid">
+                <button data-value="C" class="calc-clear">C</button>
+                <button data-value="/">÷</button>
+                <button data-value="*">×</button>
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button data-value="-">−</button>
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button data-value="+">+</button>
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button data-value="=" class="calc-equals">=</button>
+                <button data-value="0" class="calc-zero">0</button>
+                <button data-value=".">.</button>
+            </div>
+        </section>
+    </aside>
+
+</div>
+
+<footer class="footer">
+    <p>Stay Awhile. Find your kind of somewhere.</p>
+</footer>
+
+</body>
+</html>
